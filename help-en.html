@@ -19,14 +19,20 @@
   --shadow:0 12px 32px rgba(0,0,0,0.18);
 }
 
-*{box-sizing:border-box;}
+*{
+  box-sizing:border-box;
+}
 
-body{
+html, body{
   margin:0;
-  padding:24px 18px 48px;
+  padding:0;
   background:var(--bg);
   color:var(--text-primary);
   font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",sans-serif;
+}
+
+body{
+  padding:24px 18px 48px;
   line-height:1.7;
 }
 
@@ -61,27 +67,95 @@ h1{
   margin:0 0 10px;
   color:var(--gold);
   font-size:34px;
+  line-height:1.15;
 }
 
 .hero p{
+  margin:0;
   color:var(--text-secondary);
+  font-size:16px;
 }
 
 .section{
   background:var(--card);
+  border:1px solid var(--border);
   border-radius:22px;
   padding:22px;
   margin-bottom:16px;
-  border:1px solid var(--border);
   box-shadow:var(--shadow);
 }
 
 .section h2{
   margin:0 0 14px;
+  font-size:22px;
+  color:var(--text-primary);
 }
 
 .section p{
+  margin:0 0 14px;
   color:var(--text-secondary);
+}
+
+.feature-grid{
+  display:grid;
+  gap:12px;
+}
+
+.feature-card{
+  background:var(--card-elevated);
+  border-radius:16px;
+  padding:16px;
+  border:1px solid rgba(255,255,255,0.04);
+}
+
+.feature-card h3{
+  margin:0 0 8px;
+  color:var(--cyan);
+  font-size:17px;
+}
+
+.feature-card p{
+  margin:0;
+  font-size:14px;
+  color:var(--text-secondary);
+}
+
+.steps{
+  display:grid;
+  gap:12px;
+}
+
+.step{
+  display:flex;
+  gap:14px;
+  align-items:flex-start;
+  background:var(--card-elevated);
+  border-radius:16px;
+  padding:14px 16px;
+}
+
+.step-number{
+  flex:0 0 34px;
+  height:34px;
+  border-radius:50%;
+  background:var(--gold);
+  color:#142631;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:800;
+  font-size:15px;
+}
+
+.step-content strong{
+  display:block;
+  margin-bottom:4px;
+  color:var(--text-primary);
+}
+
+.step-content span{
+  color:var(--text-secondary);
+  font-size:14px;
 }
 
 .faq-item{
@@ -91,15 +165,48 @@ h1{
 
 .faq-item:first-child{
   border-top:none;
+  padding-top:0;
 }
 
 .question{
+  margin:0 0 8px;
   color:var(--cyan);
   font-weight:700;
+  font-size:17px;
 }
 
 .answer{
+  margin:0;
   color:var(--text-secondary);
+  font-size:15px;
+}
+
+.note-box{
+  background:linear-gradient(180deg, rgba(232,163,23,0.10), rgba(255,255,255,0.02));
+  border:1px solid rgba(232,163,23,0.15);
+  border-radius:18px;
+  padding:16px;
+}
+
+.note-box strong{
+  display:block;
+  margin-bottom:8px;
+  color:var(--gold);
+}
+
+.image-box{
+  margin-top:14px;
+  background:var(--card-elevated);
+  border:1px dashed rgba(255,255,255,0.14);
+  border-radius:18px;
+  padding:18px;
+  text-align:center;
+  color:var(--text-tertiary);
+  font-size:14px;
+}
+
+.contact-box{
+  background:linear-gradient(180deg, rgba(79,195,247,0.08), rgba(255,255,255,0.02));
 }
 
 .contact-button{
@@ -114,12 +221,21 @@ h1{
 }
 
 .footer{
+  margin-top:8px;
   text-align:center;
-  margin-top:20px;
   color:var(--text-tertiary);
   font-size:13px;
 }
 
+@media (min-width: 720px){
+  body{
+    padding:28px 22px 54px;
+  }
+
+  .feature-grid{
+    grid-template-columns:1fr 1fr;
+  }
+}
 </style>
 </head>
 
@@ -127,83 +243,195 @@ h1{
 
 <div class="container">
 
-<div class="hero">
+<section class="hero">
 <div class="badge">🤲 PrayerApp Support Center</div>
 <h1>Help</h1>
 
 <p>
-This page contains useful information, frequently asked questions and basic guidance to help you use PrayerApp more easily.
+This page provides useful information, usage guides, frequently asked questions and support channels to help you use PrayerApp more easily. Here you can find explanations about prayer times, Qibla direction, notifications and location settings.
 </p>
+</section>
+
+<section class="section">
+<h2>What is PrayerApp?</h2>
+
+<p>
+PrayerApp is a simple and user-friendly mobile application designed to support daily worship. It provides prayer times, Qibla direction, daily verses, religious days and reminders in one place.
+</p>
+
+<p>
+Our goal is to create a fast, easy-to-understand and comfortable experience for users of all ages. The application continues to improve regularly and user feedback plays an important role in this process.
+</p>
+</section>
+
+<section class="section">
+<h2>What Does the App Offer?</h2>
+
+<div class="feature-grid">
+
+<div class="feature-card">
+<h3>Prayer Times</h3>
+<p>You can view daily prayer times according to your location or the city you select.</p>
 </div>
 
-<div class="section">
-<h2>About PrayerApp</h2>
-
-<p>
-PrayerApp is a simple and practical mobile application designed to help Muslims keep track of daily prayer times and other useful religious information.
-</p>
-
-<p>
-The application includes prayer times, Qibla direction, daily verses, religious days and helpful reminders. Our goal is to provide a fast, clean and easy-to-use experience for everyone.
-</p>
+<div class="feature-card">
+<h3>Iftar / Suhoor Time</h3>
+<p>Especially during Ramadan, you can easily track the remaining time until iftar or suhoor.</p>
 </div>
 
-<div class="section">
-<h2>Prayer Times</h2>
-
-<p>
-Prayer times are calculated based on your selected location and calculation method. If automatic location is enabled, the app will use your device location. Otherwise you can manually choose a city.
-</p>
-
-<p>
-Different regions may use slightly different calculation methods. You can change the calculation method from the Settings section.
-</p>
+<div class="feature-card">
+<h3>Qibla Compass</h3>
+<p>Using your device sensors, you can determine the Qibla direction easily.</p>
 </div>
 
-<div class="section">
-<h2>Qibla Compass</h2>
-
-<p>
-The Qibla compass uses your device sensors to determine the direction of Mecca. For the best accuracy, keep your phone flat and away from metal objects or magnetic interference.
-</p>
+<div class="feature-card">
+<h3>Daily Verse</h3>
+<p>You can read the daily verse and follow inspirational religious content.</p>
 </div>
 
-<div class="section">
+<div class="feature-card">
+<h3>Religious Days</h3>
+<p>Access important Islamic nights, holidays and other religious dates easily.</p>
+</div>
+
+<div class="feature-card">
+<h3>Notifications</h3>
+<p>You can receive reminders for prayer times and other important events.</p>
+</div>
+
+</div>
+</section>
+
+<section class="section">
+<h2>Getting Started</h2>
+
+<div class="steps">
+
+<div class="step">
+<div class="step-number">1</div>
+<div class="step-content">
+<strong>Check your location settings</strong>
+<span>You can allow automatic location or manually choose your city and country.</span>
+</div>
+</div>
+
+<div class="step">
+<div class="step-number">2</div>
+<div class="step-content">
+<strong>Select a calculation method</strong>
+<span>Different regions may use different prayer time calculation methods.</span>
+</div>
+</div>
+
+<div class="step">
+<div class="step-number">3</div>
+<div class="step-content">
+<strong>Enable notifications</strong>
+<span>Make sure both app notifications and iPhone notification permissions are enabled.</span>
+</div>
+</div>
+
+<div class="step">
+<div class="step-number">4</div>
+<div class="step-content">
+<strong>Try the Qibla feature</strong>
+<span>Keep your phone flat and away from metal surfaces for better accuracy.</span>
+</div>
+</div>
+
+</div>
+
+<div class="image-box">
+<img src="Ekran Resmi 2026-03-10 14.19.30.png" alt="PrayerApp screenshot" style="max-width:100%; border-radius:14px;">
+</div>
+</section>
+
+<section class="section">
+<h2>How Prayer Times Work</h2>
+
+<p>
+Prayer times are calculated according to your selected location and calculation method. If automatic location is enabled, your device location will be used.
+</p>
+
+<p>
+Different institutions may use slightly different calculation methods, which may cause small variations in prayer times.
+</p>
+
+<div class="note-box">
+<strong>Important Note</strong>
+Prayer times may vary depending on location, device settings and calculation methods.
+</div>
+
+</section>
+
+<section class="section">
+<h2>About the Qibla Feature</h2>
+
+<p>
+The Qibla compass uses your device sensors to determine the direction of Mecca. External magnetic interference may affect accuracy.
+</p>
+
+<p>
+For best results keep your phone flat and avoid metallic objects nearby.
+</p>
+
+</section>
+
+<section class="section">
+<h2>Notifications</h2>
+
+<p>
+Notifications help remind you of prayer times and important moments. Make sure notifications are enabled in both the app and iPhone settings.
+</p>
+
+</section>
+
+<section class="section">
 <h2>Frequently Asked Questions</h2>
 
 <div class="faq-item">
 <p class="question">Why are prayer times different?</p>
 <p class="answer">
-This usually happens due to different calculation methods or incorrect location settings.
+Different calculation methods or incorrect location settings may cause this.
 </p>
 </div>
 
 <div class="faq-item">
-<p class="question">Why am I not receiving notifications?</p>
+<p class="question">Why is my location incorrect?</p>
 <p class="answer">
-Make sure notifications are enabled both inside the app and in your iPhone system settings.
+Disable automatic location and manually select your city if needed.
 </p>
 </div>
 
 <div class="faq-item">
-<p class="question">Does the app work offline?</p>
+<p class="question">Why does the Qibla direction change?</p>
 <p class="answer">
-Some information may still appear offline, but updated prayer times and certain features require internet access.
+Device sensors can be affected by magnetic interference or metal surfaces.
 </p>
 </div>
 
+<div class="faq-item">
+<p class="question">Why are notifications not appearing?</p>
+<p class="answer">
+Check both the app notification settings and your iPhone notification permissions.
+</p>
 </div>
 
-<div class="section">
+</section>
+
+<section class="section contact-box">
+
 <h2>Support & Feedback</h2>
 
 <p>
-If you encounter a problem or would like to suggest a new feature, please contact us. Your feedback helps us improve the application.
+If you encounter a problem or want to suggest a new feature, please contact us. Your feedback helps us improve the application.
 </p>
 
-<a class="contact-button" href="https://forms.gle/XXXXXXXXXXXX">Contact Us</a>
+<a class="contact-button" href="https://forms.gle/A2RjPiETJf591nwM6" target="_blank">
+Contact Us
+</a>
 
-</div>
+</section>
 
 <div class="footer">
 © 2026 PrayerApp
