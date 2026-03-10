@@ -6,9 +6,19 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
+
+:root{
+--bg:#1A2F3D;
+--card:#23424E;
+--card-elevated:#2E515A;
+--gold:#E8A317;
+--cyan:#4FC3F7;
+--text-secondary:#B0BEC5;
+}
+
 body{
 font-family:-apple-system,BlinkMacSystemFont,sans-serif;
-background:#0f2a2a;
+background:var(--bg);
 color:white;
 margin:0;
 padding:30px;
@@ -21,20 +31,26 @@ margin:auto;
 }
 
 h1{
-color:#F5C542;
+color:var(--gold);
+margin-bottom:30px;
 }
 
 .card{
-background:#173a3a;
-padding:20px;
-border-radius:12px;
-margin-bottom:20px;
+background:var(--card);
+padding:22px;
+border-radius:14px;
+margin-bottom:18px;
 }
 
-a{
-color:#F5C542;
-text-decoration:none;
+.card h3{
+margin-top:0;
+color:var(--cyan);
 }
+
+p{
+color:var(--text-secondary);
+}
+
 </style>
 </head>
 
@@ -60,8 +76,8 @@ text-decoration:none;
 </div>
 
 <div class="card">
-<h3>Geri bildirim göndermek</h3>
-<p>Uygulama hakkında görüş veya önerilerinizi uygulama içindeki "Bize Ulaşın" bölümünden iletebilirsiniz.</p>
+<h3>Geri bildirim</h3>
+<p>Uygulama hakkında görüş ve önerilerinizi Ayarlar → Bize Ulaşın bölümünden gönderebilirsiniz.</p>
 </div>
 
 </div>
