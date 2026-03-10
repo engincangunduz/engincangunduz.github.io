@@ -3,33 +3,113 @@
 <head>
 <meta charset="UTF-8">
 <title>PrayerApp</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <style>
+
+:root{
+--bg:#1A2F3D;
+--card:#23424E;
+--gold:#E8A317;
+--cyan:#4FC3F7;
+--text-secondary:#B0BEC5;
+--border:rgba(255,255,255,0.08);
+}
+
+*{
+box-sizing:border-box;
+}
+
 body{
-font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-background:#0f2a2a;
+margin:0;
+font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display",sans-serif;
+background:var(--bg);
 color:white;
 display:flex;
 align-items:center;
 justify-content:center;
-height:100vh;
-margin:0;
-text-align:center;
+min-height:100vh;
+padding:20px;
 }
-h1{
-font-size:40px;
+
+.container{
+text-align:center;
+background:var(--card);
+padding:40px 32px;
+border-radius:20px;
+border:1px solid var(--border);
+max-width:420px;
+width:100%;
+}
+
+.logo{
+font-size:46px;
 margin-bottom:10px;
 }
-p{
-opacity:0.8;
+
+h1{
+margin:0 0 10px;
+font-size:36px;
+color:var(--gold);
 }
+
+p{
+margin:0 0 24px;
+color:var(--text-secondary);
+font-size:16px;
+}
+
+.links{
+display:flex;
+flex-direction:column;
+gap:10px;
+}
+
+a{
+text-decoration:none;
+background:rgba(79,195,247,0.12);
+color:var(--cyan);
+padding:12px;
+border-radius:12px;
+font-weight:600;
+}
+
+a:hover{
+background:rgba(79,195,247,0.22);
+}
+
+.footer{
+margin-top:24px;
+font-size:13px;
+color:var(--text-secondary);
+opacity:0.7;
+}
+
 </style>
 </head>
 
 <body>
 
-<div>
+<div class="container">
+
+<div class="logo">🤲</div>
+
 <h1>PrayerApp</h1>
-<p>Namaz vakitleri, kıble ve günlük ayet uygulaması</p>
+
+<p>
+Namaz vakitleri, kıble pusulası ve günlük ayet içeriğini
+tek bir uygulamada sunan sade ve kullanışlı bir yardımcı.
+</p>
+
+<div class="links">
+<a href="help.html">📖 Yardım</a>
+<a href="about.html">ℹ️ Hakkımızda</a>
+</div>
+
+<div class="footer">
+© 2026 PrayerApp
+</div>
+
 </div>
 
 </body>
