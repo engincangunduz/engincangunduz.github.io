@@ -6,79 +6,430 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
-
 :root{
---bg:#1A2F3D;
---card:#23424E;
---card-elevated:#2E515A;
---gold:#E8A317;
---cyan:#4FC3F7;
---text-secondary:#B0BEC5;
+  --bg:#1A2F3D;
+  --card:#23424E;
+  --card-elevated:#2E515A;
+  --gold:#E8A317;
+  --cyan:#4FC3F7;
+  --text-primary:#FFFFFF;
+  --text-secondary:#B0BEC5;
+  --text-tertiary:#90A4AE;
+  --border:rgba(255,255,255,0.06);
+  --shadow:0 12px 32px rgba(0,0,0,0.18);
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html, body{
+  margin:0;
+  padding:0;
+  background:var(--bg);
+  color:var(--text-primary);
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",sans-serif;
 }
 
 body{
-font-family:-apple-system,BlinkMacSystemFont,sans-serif;
-background:var(--bg);
-color:white;
-margin:0;
-padding:30px;
-line-height:1.6;
+  padding:24px 18px 48px;
+  line-height:1.7;
 }
 
 .container{
-max-width:700px;
-margin:auto;
+  max-width:820px;
+  margin:0 auto;
+}
+
+.hero{
+  background:linear-gradient(180deg, rgba(79,195,247,0.10), rgba(255,255,255,0.02));
+  border:1px solid var(--border);
+  border-radius:24px;
+  padding:26px 22px;
+  margin-bottom:18px;
+  box-shadow:var(--shadow);
+}
+
+.badge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 12px;
+  border-radius:999px;
+  background:rgba(79,195,247,0.12);
+  color:var(--cyan);
+  font-size:13px;
+  font-weight:700;
+  margin-bottom:14px;
 }
 
 h1{
-color:var(--gold);
-margin-bottom:30px;
+  margin:0 0 10px;
+  color:var(--gold);
+  font-size:34px;
+  line-height:1.15;
 }
 
-.card{
-background:var(--card);
-padding:22px;
-border-radius:14px;
-margin-bottom:18px;
+.hero p{
+  margin:0;
+  color:var(--text-secondary);
+  font-size:16px;
 }
 
-.card h3{
-margin-top:0;
-color:var(--cyan);
+.section{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:22px;
+  padding:22px;
+  margin-bottom:16px;
+  box-shadow:var(--shadow);
 }
 
-p{
-color:var(--text-secondary);
+.section h2{
+  margin:0 0 14px;
+  font-size:22px;
+  color:var(--text-primary);
 }
 
+.section p{
+  margin:0 0 14px;
+  color:var(--text-secondary);
+}
+
+.feature-grid{
+  display:grid;
+  gap:12px;
+}
+
+.feature-card{
+  background:var(--card-elevated);
+  border-radius:16px;
+  padding:16px;
+  border:1px solid rgba(255,255,255,0.04);
+}
+
+.feature-card h3{
+  margin:0 0 8px;
+  color:var(--cyan);
+  font-size:17px;
+}
+
+.feature-card p{
+  margin:0;
+  font-size:14px;
+  color:var(--text-secondary);
+}
+
+.steps{
+  display:grid;
+  gap:12px;
+}
+
+.step{
+  display:flex;
+  gap:14px;
+  align-items:flex-start;
+  background:var(--card-elevated);
+  border-radius:16px;
+  padding:14px 16px;
+}
+
+.step-number{
+  flex:0 0 34px;
+  height:34px;
+  border-radius:50%;
+  background:var(--gold);
+  color:#142631;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:800;
+  font-size:15px;
+}
+
+.step-content strong{
+  display:block;
+  margin-bottom:4px;
+  color:var(--text-primary);
+}
+
+.step-content span{
+  color:var(--text-secondary);
+  font-size:14px;
+}
+
+.faq-item{
+  padding:16px 0;
+  border-top:1px solid rgba(255,255,255,0.07);
+}
+
+.faq-item:first-child{
+  border-top:none;
+  padding-top:0;
+}
+
+.question{
+  margin:0 0 8px;
+  color:var(--cyan);
+  font-weight:700;
+  font-size:17px;
+}
+
+.answer{
+  margin:0;
+  color:var(--text-secondary);
+  font-size:15px;
+}
+
+.note-box{
+  background:linear-gradient(180deg, rgba(232,163,23,0.10), rgba(255,255,255,0.02));
+  border:1px solid rgba(232,163,23,0.15);
+  border-radius:18px;
+  padding:16px;
+}
+
+.note-box strong{
+  display:block;
+  margin-bottom:8px;
+  color:var(--gold);
+}
+
+.image-box{
+  margin-top:14px;
+  background:var(--card-elevated);
+  border:1px dashed rgba(255,255,255,0.14);
+  border-radius:18px;
+  padding:18px;
+  text-align:center;
+  color:var(--text-tertiary);
+  font-size:14px;
+}
+
+.contact-box{
+  background:linear-gradient(180deg, rgba(79,195,247,0.08), rgba(255,255,255,0.02));
+}
+
+.contact-button{
+  display:inline-block;
+  margin-top:12px;
+  padding:12px 16px;
+  background:var(--gold);
+  color:#142631;
+  text-decoration:none;
+  border-radius:14px;
+  font-weight:800;
+}
+
+.footer{
+  margin-top:8px;
+  text-align:center;
+  color:var(--text-tertiary);
+  font-size:13px;
+}
+
+@media (min-width: 720px){
+  body{
+    padding:28px 22px 54px;
+  }
+
+  .feature-grid{
+    grid-template-columns:1fr 1fr;
+  }
+}
 </style>
 </head>
-
 <body>
 
 <div class="container">
 
-<h1>Yardım</h1>
+  <section class="hero">
+    <div class="badge">🤲 PrayerApp Destek Merkezi</div>
+    <h1>Yardım</h1>
+    <p>
+      PrayerApp’i daha rahat kullanabilmeniz için bu sayfada temel bilgiler, kullanım rehberleri, sık sorulan sorular ve destek kanalları yer alır. Namaz vakitlerinden kıble özelliğine, bildirimlerden konum ayarlarına kadar ihtiyaç duyabileceğiniz temel açıklamaları burada bulabilirsiniz.
+    </p>
+  </section>
 
-<div class="card">
-<h3>Namaz vakitleri doğru mu?</h3>
-<p>Namaz vakitleri seçtiğiniz konum ve hesaplama yöntemine göre hesaplanmaktadır. Ayarlar bölümünden konum ve hesaplama yöntemini değiştirebilirsiniz.</p>
-</div>
+  <section class="section">
+    <h2>PrayerApp Nedir?</h2>
+    <p>
+      PrayerApp; günlük ibadet hayatını desteklemek amacıyla geliştirilen, sade ve kullanışlı bir mobil uygulamadır. Uygulama içerisinde namaz vakitleri, kıble yönü, günlük ayet içerikleri, dini günler ve hatırlatmalar gibi pek çok faydalı özellik bir araya getirilmiştir.
+    </p>
+    <p>
+      Amacımız; hızlı açılan, kolay anlaşılan ve her yaştan kullanıcı için rahat kullanılabilen bir deneyim sunmaktır. Uygulama düzenli olarak geliştirilmeye devam eder ve kullanıcı geri bildirimleri bu sürecin önemli bir parçasıdır.
+    </p>
+  </section>
 
-<div class="card">
-<h3>Kıble yönü nasıl çalışır?</h3>
-<p>Kıble pusulası telefonunuzun sensörlerini kullanarak Mekke yönünü gösterir. Daha doğru sonuç almak için telefonunuzu düz tutmanız önerilir.</p>
-</div>
+  <section class="section">
+    <h2>Uygulamada Neler Var?</h2>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h3>Namaz Vakitleri</h3>
+        <p>Bulunduğunuz konuma veya seçtiğiniz şehre göre günlük namaz saatlerini görüntüleyebilirsiniz.</p>
+      </div>
+      <div class="feature-card">
+        <h3>İftar / İmsak Bilgisi</h3>
+        <p>Özellikle Ramazan döneminde iftara ve imsaka kalan süreyi kolayca takip edebilirsiniz.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Kıble Pusulası</h3>
+        <p>Telefon sensörlerini kullanarak kıble yönünü görüntüleyebilir, yön tayinini daha kolay yapabilirsiniz.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Günün Ayeti</h3>
+        <p>Uygulama içinde günlük olarak sunulan ayet içeriğini okuyabilir ve manevi içerik akışını takip edebilirsiniz.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Dini Günler</h3>
+        <p>Önemli kandil geceleri, bayramlar ve diğer dini günlere kolayca ulaşabilirsiniz.</p>
+      </div>
+      <div class="feature-card">
+        <h3>Bildirimler</h3>
+        <p>Uygulama içi ayarlarla belirli vakitler ve içerikler için hatırlatma alabilirsiniz.</p>
+      </div>
+    </div>
+  </section>
 
-<div class="card">
-<h3>Bildirimler gelmiyor</h3>
-<p>Bildirimlerin aktif olması için Ayarlar → Bildirimler bölümünden izin vermeniz gerekir.</p>
-</div>
+  <section class="section">
+    <h2>Başlarken</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <strong>Konum ayarınızı kontrol edin</strong>
+          <span>Uygulamayı ilk kez kullanırken otomatik konumu açık bırakabilir veya şehir ve ülke bilgilerinizi manuel olarak seçebilirsiniz.</span>
+        </div>
+      </div>
 
-<div class="card">
-<h3>Geri bildirim</h3>
-<p>Uygulama hakkında görüş ve önerilerinizi Ayarlar → Bize Ulaşın bölümünden gönderebilirsiniz.</p>
-</div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <strong>Hesaplama yöntemini inceleyin</strong>
+          <span>Bulunduğunuz bölgeye göre farklı hesaplama yöntemleri kullanılabilir. İsterseniz ayarlardan size uygun metodu seçebilirsiniz.</span>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <strong>Bildirimlere izin verin</strong>
+          <span>Namaz vakitleri veya diğer hatırlatmalar için uygulama içi bildirim seçeneğini ve iPhone sistem iznini aktif hale getirin.</span>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-number">4</div>
+        <div class="step-content">
+          <strong>Kıble özelliğini test edin</strong>
+          <span>Kıble yönünü kullanırken telefonunuzu düz tutun ve mümkünse metal yüzeylerden uzak bir ortamda kontrol edin.</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="image-box">
+      Buraya istersen uygulama ekran görüntüsü ekleyebilirsin.  
+      Örnek dosya adı: <strong>help-preview.png</strong>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Namaz Vakitleri Nasıl Çalışır?</h2>
+    <p>
+      Uygulama, seçtiğiniz konuma ve hesaplama yöntemine göre günlük namaz vakitlerini gösterir. Eğer otomatik konum açıksa, cihazınızın konum bilgisi kullanılır. Manuel konum açıksa, girdiğiniz şehir ve ülke bilgisi esas alınır.
+    </p>
+    <p>
+      Hesaplama yöntemleri farklı kurum veya bölgelere göre küçük değişiklikler gösterebilir. Bu nedenle vakitlerde bulunduğunuz yere göre ufak farklılıklar oluşabilir. Dilerseniz ayarlar bölümünden farklı metotları deneyerek size en uygun sonucu kullanabilirsiniz.
+    </p>
+
+    <div class="note-box">
+      <strong>Önemli Not</strong>
+      Namaz vakitleri bulunduğunuz konum, cihaz ayarları ve seçilen hesaplama yöntemine göre değişebilir. Yerel resmi takvimler ile zaman zaman küçük farklılıklar oluşabilir.
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Kıble Özelliği Hakkında</h2>
+    <p>
+      Kıble pusulası, cihazınızın yön ve konum sensörlerinden yararlanarak Mekke yönünü göstermeye çalışır. Bu özellik çoğu durumda hızlı ve kullanışlıdır; ancak cihaz sensörleri çevresel koşullardan etkilenebilir.
+    </p>
+    <p>
+      Daha doğru kullanım için telefonunuzu düz tutmanız, manyetik alan oluşturabilecek metal eşyalardan uzak durmanız ve cihazınızın pusula sensörünü gerektiğinde yeniden kalibre etmeniz önerilir.
+    </p>
+    <p>
+      Eğer kıble yönü size hatalı görünüyorsa önce konum bilgilerinizin doğru olduğundan, ardından pusula verisinin düzgün çalıştığından emin olun.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>Bildirimler ve Hatırlatmalar</h2>
+    <p>
+      Uygulama içindeki bildirim sistemi sayesinde belirli vakitler için hatırlatma alabilirsiniz. Ancak bunun çalışması için iki şart önemlidir: uygulama içi bildirim ayarının açık olması ve iPhone sistem ayarlarında PrayerApp için bildirim izninin verilmiş olması.
+    </p>
+    <p>
+      Bildirimler görünmüyorsa cihazınızın sessiz mod, odak modu, düşük güç modu veya sistem kısıtlamaları gibi ayarlarını da kontrol etmeniz faydalı olur.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>Sık Sorulan Sorular</h2>
+
+    <div class="faq-item">
+      <p class="question">Namaz vakitleri neden farklı görünebilir?</p>
+      <p class="answer">
+        Bunun en yaygın sebebi hesaplama yönteminin farklı olmasıdır. Ayrıca otomatik konum ile manuel şehir seçimi arasında da fark oluşabilir.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <p class="question">Konumum yanlış görünüyorsa ne yapmalıyım?</p>
+      <p class="answer">
+        Ayarlar bölümünden otomatik konumu kapatıp şehir ve ülke bilgilerini manuel girebilirsiniz. Ayrıca iPhone konum izninin açık olduğundan emin olun.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <p class="question">Kıble yönü neden bazen sapabiliyor?</p>
+      <p class="answer">
+        Cihaz pusulası; manyetik alan, metal yüzey, kılıf veya sensör kalibrasyonu gibi durumlardan etkilenebilir. Telefonu düz tutarak ve farklı bir ortamda tekrar deneyerek kontrol edebilirsiniz.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <p class="question">Bildirimleri açtım ama yine de gelmiyor, neden?</p>
+      <p class="answer">
+        Uygulama içi ayar açık olsa bile sistem bildirim izni kapalı olabilir. Ayrıca odak modu veya düşük güç modu da bildirimlerin görünmesini etkileyebilir.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <p class="question">Günün ayeti her gün değişiyor mu?</p>
+      <p class="answer">
+        Uygulama yapısına göre içerikler günlük olarak yenilenebilir veya sistem içinde sırayla gösterilebilir. İçerik yapısı zaman içinde geliştirilebilir.
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <p class="question">Uygulama internetsiz çalışır mı?</p>
+      <p class="answer">
+        Bazı içerikler önceden yüklenmişse görüntülenebilir; ancak güncel vakit verileri ve bazı dinamik içerikler için internet bağlantısı gerekebilir.
+      </p>
+    </div>
+  </section>
+
+  <section class="section contact-box">
+    <h2>Destek ve Geri Bildirim</h2>
+    <p>
+      Uygulamada karşılaştığınız bir sorun, eklenmesini istediğiniz bir özellik ya da paylaşmak istediğiniz bir öneri varsa bizimle iletişime geçebilirsiniz. Kullanıcılardan gelen geri bildirimler ürün geliştirme sürecinde büyük önem taşır ve mümkün olduğunca dikkatle değerlendirilir.
+    </p>
+    <p>
+      Özellikle hatalı konum, bildirim sorunları, kıble kullanımı veya içerik önerileriyle ilgili mesajlarınız bizim için çok değerlidir.
+    </p>
+    <a class="contact-button" href="https://forms.gle/XXXXXXXXXXXX">Bize Ulaşın</a>
+  </section>
+
+  <div class="footer">
+    © 2026 PrayerApp
+  </div>
 
 </div>
 
