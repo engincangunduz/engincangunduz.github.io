@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<title>Gizlilik Politikası - Namaz Zamanı & Zikir</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+:root{
+  --bg:#1A2F3D;
+  --card:#23424E;
+  --card-elevated:#2E515A;
+  --gold:#E8A317;
+  --cyan:#4FC3F7;
+  --text-primary:#FFFFFF;
+  --text-secondary:#B0BEC5;
+  --text-tertiary:#90A4AE;
+  --border:rgba(255,255,255,0.06);
+  --shadow:0 12px 32px rgba(0,0,0,0.18);
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html, body{
+  margin:0;
+  padding:0;
+  background:var(--bg);
+  color:var(--text-primary);
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",sans-serif;
+}
+
+body{
+  padding:24px 18px 48px;
+  line-height:1.7;
+}
+
+.container{
+  max-width:820px;
+  margin:0 auto;
+}
+
+.hero{
+  background:linear-gradient(180deg, rgba(79,195,247,0.10), rgba(255,255,255,0.02));
+  border:1px solid var(--border);
+  border-radius:24px;
+  padding:26px 22px;
+  margin-bottom:18px;
+  box-shadow:var(--shadow);
+}
+
+.badge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 12px;
+  border-radius:999px;
+  background:rgba(79,195,247,0.12);
+  color:var(--cyan);
+  font-size:13px;
+  font-weight:700;
+  margin-bottom:14px;
+}
+
+h1{
+  margin:0 0 10px;
+  color:var(--gold);
+  font-size:34px;
+  line-height:1.15;
+}
+
+.hero p{
+  margin:0;
+  color:var(--text-secondary);
+  font-size:16px;
+}
+
+.section{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:22px;
+  padding:22px;
+  margin-bottom:16px;
+  box-shadow:var(--shadow);
+}
+
+.section h2{
+  margin:0 0 14px;
+  font-size:22px;
+  color:var(--text-primary);
+}
+
+.section p{
+  margin:0 0 14px;
+  color:var(--text-secondary);
+}
+
+.info-grid{
+  display:grid;
+  gap:12px;
+}
+
+.info-card{
+  background:var(--card-elevated);
+  border-radius:16px;
+  padding:16px;
+  border:1px solid rgba(255,255,255,0.04);
+}
+
+.info-card h3{
+  margin:0 0 8px;
+  color:var(--cyan);
+  font-size:17px;
+}
+
+.info-card p{
+  margin:0;
+  font-size:14px;
+  color:var(--text-secondary);
+}
+
+.note-box{
+  background:linear-gradient(180deg, rgba(232,163,23,0.10), rgba(255,255,255,0.02));
+  border:1px solid rgba(232,163,23,0.15);
+  border-radius:18px;
+  padding:16px;
+}
+
+.note-box strong{
+  display:block;
+  margin-bottom:8px;
+  color:var(--gold);
+}
+
+.list{
+  margin:0;
+  padding-left:18px;
+  color:var(--text-secondary);
+}
+
+.list li{
+  margin-bottom:10px;
+}
+
+.contact-box{
+  background:linear-gradient(180deg, rgba(79,195,247,0.08), rgba(255,255,255,0.02));
+}
+
+.contact-button{
+  display:inline-block;
+  margin-top:12px;
+  padding:12px 16px;
+  background:var(--gold);
+  color:#142631;
+  text-decoration:none;
+  border-radius:14px;
+  font-weight:800;
+}
+
+.footer{
+  margin-top:8px;
+  text-align:center;
+  color:var(--text-tertiary);
+  font-size:13px;
+}
+
+a{
+  color:var(--cyan);
+}
+
+@media (min-width: 720px){
+  body{
+    padding:28px 22px 54px;
+  }
+
+  .info-grid{
+    grid-template-columns:1fr 1fr;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <section class="hero">
+    <div class="badge">🔒 Namaz Zamanı & Zikir</div>
+    <h1>Gizlilik Politikası</h1>
+    <p>
+      Bu gizlilik politikası, Namaz Zamanı & Zikir uygulamasını kullanırken kişisel verilerinizin nasıl işlendiğini, hangi bilgilere erişilebildiğini ve bu bilgilerin hangi amaçlarla kullanılabileceğini açıklamak için hazırlanmıştır.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>1. Genel Bilgilendirme</h2>
+    <p>
+      Namaz Zamanı & Zikir, kullanıcıların namaz vakitlerini görüntüleyebilmesi, kıble yönünü bulabilmesi, dini günleri takip edebilmesi ve belirli hatırlatmaları kullanabilmesi amacıyla geliştirilmiş bir mobil uygulamadır.
+    </p>
+    <p>
+      Uygulama kullanılırken bazı cihaz izinleri talep edilebilir. Bu izinler yalnızca uygulama özelliklerinin çalışabilmesi için kullanılır ve kullanıcının açık izni olmadan gereksiz veri toplanması amaçlanmaz.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>2. Toplanabilecek Bilgiler</h2>
+    <div class="info-grid">
+      <div class="info-card">
+        <h3>Konum Bilgisi</h3>
+        <p>
+          Namaz vakitlerinin doğru gösterilmesi ve kıble yönünün hesaplanabilmesi için cihazın konum bilgisi kullanılabilir.
+        </p>
+      </div>
+      <div class="info-card">
+        <h3>Bildirim İzni</h3>
+        <p>
+          Namaz vakti veya diğer hatırlatmaların gönderilebilmesi için bildirim izni istenebilir.
+        </p>
+      </div>
+      <div class="info-card">
+        <h3>Cihaz Bilgileri</h3>
+        <p>
+          Uygulamanın performansını iyileştirmek ve teknik sorunları anlamak amacıyla sınırlı teknik bilgiler işlenebilir.
+        </p>
+      </div>
+      <div class="info-card">
+        <h3>Kullanıcı Tarafından Sağlanan Bilgiler</h3>
+        <p>
+          Destek formu, geri bildirim veya iletişim kanalları üzerinden gönderdiğiniz bilgiler tarafımıza iletilebilir.
+        </p>
+      </div>
+    </div>
+
+    <div class="note-box" style="margin-top:14px;">
+      <strong>Önemli Not</strong>
+      Eğer uygulamanız kullanıcı hesabı oluşturmuyor, ad-soyad, telefon, e-posta veya ödeme verisi toplamıyorsa bunu App Store tarafındaki veri beyanınızla da aynı şekilde tutarlı olacak biçimde belirtmelisiniz.
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>3. Bilgiler Hangi Amaçlarla Kullanılır?</h2>
+    <ul class="list">
+      <li>Namaz vakitlerini doğru konuma göre göstermek</li>
+      <li>Kıble yönünü hesaplamak</li>
+      <li>Hatırlatma ve bildirim özelliklerini çalıştırmak</li>
+      <li>Uygulama performansını geliştirmek</li>
+      <li>Hata, çökme veya teknik problemleri analiz etmek</li>
+      <li>Kullanıcı geri bildirimlerini değerlendirmek</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2>4. Konum Verisi Kullanımı</h2>
+    <p>
+      Uygulama, bulunduğunuz konuma göre daha doğru namaz vakitleri sunabilmek amacıyla konum izni talep edebilir. Konum verisi yalnızca ilgili özelliğin çalışması için kullanılır.
+    </p>
+    <p>
+      Kullanıcı dilerse otomatik konum yerine şehir ve ülke bilgilerini manuel olarak seçebilir. Bu durumda cihaz konumu kullanılmadan da bazı temel özellikler çalışabilir.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>5. Bildirimler</h2>
+    <p>
+      Uygulama, namaz vakti bildirimleri ve diğer hatırlatmalar için bildirim gönderebilir. Bildirimler yalnızca kullanıcı izin verdiğinde aktif olur.
+    </p>
+    <p>
+      Bildirim ayarlarını istediğiniz zaman cihazınızın iPhone ayarlarından veya uygulama içi tercihlerden değiştirebilirsiniz.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>6. Üçüncü Taraf Servisler</h2>
+    <p>
+      Uygulama içinde analiz, hata takibi, bildirim gönderimi veya içerik sunumu gibi amaçlarla üçüncü taraf servisler kullanılabilir.
+    </p>
+    <p>
+      Eğer aşağıdaki servislerden birini kullanıyorsanız burada açıkça belirtmeniz önerilir:
+    </p>
+    <ul class="list">
+      <li>Firebase</li>
+      <li>Google Analytics for Firebase</li>
+      <li>Firebase Crashlytics</li>
+      <li>OneSignal</li>
+      <li>RevenueCat</li>
+      <li>Apple servisleri</li>
+    </ul>
+
+    <div class="note-box">
+      <strong>Burayı Kendine Göre Düzenle</strong>
+      Eğer bu servisleri kullanmıyorsan bu bölümü sadeleştir. Kullanıyorsan gerçekten kullandığın servisleri tek tek yazman daha doğru olur.
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>7. Veri Saklama ve Güvenlik</h2>
+    <p>
+      Kullanıcı verilerinin güvenliği bizim için önemlidir. Veriler, yetkisiz erişim, değişiklik, ifşa veya kayba karşı makul teknik ve idari önlemlerle korunmaya çalışılır.
+    </p>
+    <p>
+      Ancak internet üzerinden yapılan veri aktarımının tamamen risksiz olduğu garanti edilemez. Bu nedenle mutlak güvenlik garantisi verilemese de makul koruma önlemleri uygulanır.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>8. Çocukların Gizliliği</h2>
+    <p>
+      Uygulama genel kullanıma yöneliktir. Bilerek 13 yaş altındaki çocuklardan kişisel veri toplama hedeflenmez. Eğer bir çocuğa ait kişisel verinin izinsiz şekilde paylaşıldığı fark edilirse gerekli silme veya düzeltme adımları atılabilir.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>9. Kullanıcı Hakları</h2>
+    <p>
+      Yürürlükteki mevzuata bağlı olarak kullanıcılar, kendileriyle ilgili veriler hakkında bilgi talep etme, düzeltme isteme, silme talebinde bulunma veya veri işleme süreçleri hakkında iletişime geçme hakkına sahip olabilir.
+    </p>
+    <p>
+      Bu tür talepler için aşağıdaki iletişim bölümündeki bilgiler kullanılabilir.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>10. Politikada Yapılabilecek Değişiklikler</h2>
+    <p>
+      Bu gizlilik politikası zaman zaman güncellenebilir. Güncellenmiş metin bu sayfa üzerinden yayımlandığı andan itibaren geçerli olur. Uygulamayı kullanmaya devam etmeniz, güncel politikayı kabul ettiğiniz anlamına gelebilir.
+    </p>
+  </section>
+
+  <section class="section contact-box">
+    <h2>11. İletişim</h2>
+    <p>
+      Gizlilik politikasıyla ilgili sorularınız, veri talepleriniz veya geri bildirimleriniz için bizimle iletişime geçebilirsiniz.
+    </p>
+    <p>
+      E-posta: <a href="mailto:destek@example.com">destek@example.com</a>
+    </p>
+
+    <a class="contact-button" href="https://forms.gle/8EPMPim9upUQY3v58" target="_blank">
+      İletişime Geçin
+    </a>
+  </section>
+
+  <div class="footer">
+    Son güncelleme: 16 Mart 2026<br>
+    © 2026 Namaz Zamanı & Zikir
+  </div>
+
+</div>
+
+</body>
+</html>
